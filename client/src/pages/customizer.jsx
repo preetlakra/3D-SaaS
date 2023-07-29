@@ -30,10 +30,11 @@ const Customizer = () => {
 
             <div className='editorTabs-container tabs'>
                 {EditorTabs.map((tab) => (
-                  <tab
+                  <Tab
                     key={tab.name}
                     tab={tab}
-                    handleClick={() => {}}                  />
+                    handleClick={() => {}}                  
+                  />
 
                 ))}          
 
@@ -48,7 +49,7 @@ const Customizer = () => {
          >
           <CustomButton 
             type="filled"
-            title="Go Bacck"
+            title="Go Back"
             handleClick={() => state.intro = true}
           />
          </motion.div>
@@ -58,17 +59,16 @@ const Customizer = () => {
           {...slideAnimation('up')}
          >
           {FilterTabs.map((tab) => (
-                  <tab
+                  <Tab
                     key={tab.name}
                     tab={tab}
                     isFilterTab
                     isActiveTab=""
-                    handleClick={() => {}}                  />
+                    handleClick={() => {}}                  
+                  />
 
                 ))}      
-
          </motion.div>
-
         </>
     )}
 
