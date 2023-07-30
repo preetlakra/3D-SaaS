@@ -1,5 +1,5 @@
 import React from 'react'
-import { eading } from 'maath';
+import { easing } from 'maath';
 import { useSnapshot } from 'valtio';
 import { useFrame } from '@react-three/fiber';
 import { Decal, useGLTF, useTexture } from '@react-three/drei';
@@ -15,7 +15,16 @@ const Shirt = () => {
     const fullTexture = useTexture(snap.fullDecal);
 
   return (
-     
+     <group>
+      <mesh 
+      castShadow 
+      geometry={nodes.T_Shirt_male.geomtery}
+      material={materials.lambert1}
+      material-roughness={1}
+      dispose={null}
+     >
+      </mesh>
+     </group>
   )
 }
 
